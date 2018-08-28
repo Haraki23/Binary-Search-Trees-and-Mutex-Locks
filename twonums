@@ -1,4 +1,4 @@
-//Code to find the sum of two numbers in an array
+//Code to find the sum of two numbers in an array / Brute Force O(n2)
 //Author: Seifullah Elharaki
 class Solution {
     public int[] twoSum(int[] nums, int target) {
