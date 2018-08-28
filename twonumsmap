@@ -1,0 +1,21 @@
+//O(N) Time, HashMap Solution
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+    //Create a Hashmap
+    Map<Integer, Integer> map = new HashMap<>();
+    //Loop through the array
+    for (int i = 0; i < nums.length; i++) {
+        //Add to the hashmap the number as the key and the index
+        map.put(nums[i], i);
+        //Find the difference
+        int difference = target - nums[i];
+        //If out Hashmap contains the difference
+        if (map.containsKey(difference)) {
+            //Lets return a list with 2 values where we obtain the index at the difference and the index of the value itself
+            return new int[] { map.get(difference), i };
+        }
+    }
+    throw new IllegalArgumentException("We cannot find a two num solution");
+}
+}
